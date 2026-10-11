@@ -49,13 +49,18 @@ if analyze_button:
 
             st.subheader("Requirement Readiness")
 
-            st.metric(
-                label="Status",
-                value=analysis.readiness.classification,
-            )
+            readiness_status = analysis.readiness.classification.upper()
+
+            if readiness_status == "READY":
+                st.success(f"🟢 **{readiness_status}**")
+            elif readiness_status == "NEEDS CLARIFICATION":
+                st.warning(f"🟠 **{readiness_status}**")
+            elif readiness_status == "NOT READY":
+                st.error(f"🔴 **{readiness_status}**")
+            else:
+                st.info(f"**{readiness_status}**")
 
             st.write(analysis.readiness.reasoning)
-
             st.markdown("**Blocking Clarifications**")
 
             blocking_clarifications = [
