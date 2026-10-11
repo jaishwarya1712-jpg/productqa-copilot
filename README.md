@@ -14,6 +14,14 @@ The goal is to support human decision-making and help Product and QA teams ident
 
 ---
 
+## Product Demo
+
+![ProductQA Copilot requirement analysis](assets/productqa-demo.png)
+
+The example above shows ProductQA identifying a requirement that needs clarification and surfacing the blocking question before implementation.
+
+---
+
 ## Problem
 
 Product requirements can reach implementation with unresolved questions around expected behavior, failure states, boundaries, acceptance criteria, or user journeys.
